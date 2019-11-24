@@ -52,14 +52,11 @@ class Todo extends React.Component {
           </div>
           <button
             className="ui primary basic button"
-            type="submit"
             onClick={this.handleUpdate}
           >
             Save
           </button>
-          <button className="ui negative basic button" type="button">
-            Cancel
-          </button>
+          <button className="ui negative basic button">Cancel</button>
         </form>
       );
     } else {
