@@ -41,28 +41,44 @@ class Todo extends React.Component {
 
     if (this.state.isEditing) {
       result = (
-        <form onSubmit={this.handleUpdate}>
-          <input
-            type="text"
-            name="task"
-            value={this.state.task}
-            onChange={this.handleChange}
-          />
-          <button onClick={this.handleUpdate}>Save</button>
-          <button>Cancel</button>
+        <form className="ui form" onSubmit={this.handleUpdate}>
+          <div className="field">
+            <input
+              type="text"
+              name="task"
+              value={this.state.task}
+              onChange={this.handleChange}
+            />
+          </div>
+          <button
+            className="ui primary basic button"
+            type="submit"
+            onClick={this.handleUpdate}
+          >
+            Save
+          </button>
+          <button className="ui negative basic button" type="button">
+            Cancel
+          </button>
         </form>
       );
     } else {
       result = (
-        <div>
-          <li
+        <div className="ui segment">
+          <h3
             className={this.props.completed ? "completion" : ""}
             onClick={this.handleToggle}
           >
             {this.props.task}
-          </li>
-          <button onClick={this.handleToggleForm}>Edit</button>
-          <button onClick={this.handleRemove}>X</button>
+          </h3>
+          <div className="ui buttons">
+            <button className="ui button green" onClick={this.handleToggleForm}>
+              Edit
+            </button>
+            <button className="ui button red" onClick={this.handleRemove}>
+              X
+            </button>
+          </div>
           <hr />
         </div>
       );

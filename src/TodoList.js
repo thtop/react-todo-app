@@ -63,8 +63,10 @@ class TodoList extends React.Component {
   render() {
     return (
       <div>
-        <TodoForm createTodo={this.create} />
-        <ul>{this.renderList()}</ul>
+        <div className="ui segment">
+          <TodoForm createTodo={this.create} />
+        </div>
+        <div>{this.renderList()}</div>
       </div>
     );
   }
