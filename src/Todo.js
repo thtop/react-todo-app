@@ -79,7 +79,6 @@ class Todo extends React.Component {
               X
             </button>
           </div>
-          <hr />
         </div>
       );
     }

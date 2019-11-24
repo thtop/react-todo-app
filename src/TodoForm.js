@@ -30,6 +30,7 @@ class TodoForm extends React.Component {
             type="text"
             id="task"
             name="task"
+            placeholder="New todo..."
             value={this.state.task}
             onChange={this.handleChange}
           />
